@@ -1,0 +1,25 @@
+{
+  "name": "tlweb",
+  "version": "1.0.0",
+  "description": "Et webgrensesnitt for å administrere flere kamera med timelapse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnemg/TLweb.git"
+  },
+  "keywords": [
+    "picam;",
+    "timelapse;",
+    "rasperry",
+    "pi"
+  ],
+  "author": "Fartøysjef Arne Moe-Gumø",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arnemg/TLweb/issues"
+  },
+  "homepage": "https://github.com/arnemg/TLweb#readme"
+}
