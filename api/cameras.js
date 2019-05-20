@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', function(req, res, next) {
-    var myParam = "Velkommen ";
+    var myParam = "Velkommen til TLweb";
     res.render('index', {myParam});
 });
 
