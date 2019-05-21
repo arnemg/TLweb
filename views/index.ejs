@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Liste over kamera for TimeLapse bruk</title>
+ <% include partials/head %>
 </head>
-<body class="container">
-
-<main>
-    <div >
-        <h1><%= myParam %></h1>
-        <p>Svad svada svada og lit bla bla bla bla bla bla</p>
+<body>
+<% include partials/menu %>
+<div class="container-fluid bg-3 text-center">
+  <h2><%= page %></h2><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p><h3>Slurpen</h3></p>
+      <p>Bydelshuset over alle bydelshus.</p>
     </div>
-
-    <div class="w3-third">
-      <div class="w3-card">
-        <div class="w3-container">
-          <h4>Micro 120</h4>
-        </div>
-      </div>
+    <div class="col-sm-4">
+        <p><h3>Miljøhuset</h3></p>
+      <p>I Sofienbergparken er det anlagt et miljøhus, der målet er å inspirere til urbane landbruksaktiviteter i Oslo</p>
     </div>
-    <div class="w3-third">
-      <div class="w3-card">
-        <div class="w3-container">
-          <h4>Toad 135</h4>
-        </div>
-      </div>
+    <div class="col-sm-4">
+      <p><h3>Solsikka</h3></p>
+      <p>Solsikka er et prosjekt hvor vi følger utviklingen med timelapsekamera </p>
     </div>
-    <div class="w3-third">
-      <div class="w3-card">
-        <div class="w3-container">
-          <h4>DragonFli 120</h4>
-        </div>
-      </div>
-    </div>
-</main>
-
+  </div>
+</div>
 </body>
+<% include partials/script %>
 </html>

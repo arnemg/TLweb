@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+var path = require('path');
+var index = require('./api/index.js')
 
 //Set up express app - setter opp mye i bakgrunnen
 const app = express();
@@ -15,18 +17,20 @@ app.set('view engine', 'ejs');
 
 
 /* MIDLEWARE 0 - Handling static files html css images */
-app.use(express.static('public'));
-
+// app.use(express.static('public'));
+// set path for static assets
+app.use(express.static(path.join(__dirname, 'public')));
 
 /* MIDLEWARE 1 - Håndtere informasjon fra bruker*/
 //Kopler vi opp body-parser som inneholder body og kopler til request
 // formaterer som JSON
 app.use(bodyParser.json());
 
+app.use('/', index);
 
 /* MIDLEWARE 2 - Inkluderer routing file*/
 //Kjører api.js som inneholder alle http methods handling
-app.use('/api', require('./api/cameras'));
+app.use('/api', require('./api/index'));
 
 /* MIDLEWARE 3 - ERROR handling */
 // Midleware funksjoner kan ta 4 parametere err, req, res og next
@@ -36,7 +40,7 @@ app.use(function(err, req, res, next){
 });
 
 //listen for request (sette opp webserveren)
-app.listen(process.env.port || 5000, function(){
+app.listen(process.env.port || 4000, function(){
   //process.env.port -- port ligger i environment. Hvis nødvendig
   console.log("Lytter nå på port 4000");
 });

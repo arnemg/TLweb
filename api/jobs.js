@@ -1,1 +1,0 @@
-/* Legger inn en tekst slik at ikke filen er heeelt tom */
