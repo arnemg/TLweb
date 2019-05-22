@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 var path = require('path');
-var index = require('./api/index.js')
+var index = require('./api/router.js')
 
 //Set up express app - setter opp mye i bakgrunnen
 const app = express();
@@ -30,7 +30,7 @@ app.use('/', index);
 
 /* MIDLEWARE 2 - Inkluderer routing file*/
 //Kjører api.js som inneholder alle http methods handling
-app.use('/api', require('./api/index'));
+app.use('/api', require('./api/router'));
 
 /* MIDLEWARE 3 - ERROR handling */
 // Midleware funksjoner kan ta 4 parametere err, req, res og next
