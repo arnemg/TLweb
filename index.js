@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 var path = require('path');
 var index = require('./api/router.js')
 
+
 //Set up express app - setter opp mye i bakgrunnen
 const app = express();
 
@@ -35,7 +36,7 @@ app.use('/api', require('./api/router'));
 /* MIDLEWARE 3 - ERROR handling */
 // Midleware funksjoner kan ta 4 parametere err, req, res og next
 app.use(function(err, req, res, next){
-  //console.log(err);
+  console.log(err);
   res.status(422).send({error: err.message});
 });
 
@@ -44,3 +45,4 @@ app.listen(process.env.port || 4000, function(){
   //process.env.port -- port ligger i environment. Hvis nødvendig
   console.log("Lytter nå på port 4000");
 });
+module.exports = app;

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu %>
+
+<div class="container-fluid bg-3 text-center">    
+  <h3><%= page %></h3><br>
+    <div class="col-sm-4">     
+      <h2>Registrer et nytt kamera for timelapse bruk</h2>
+    </div>
+    <div class="col-sm-4">
+      <form action="http://localhost:4000/nyCam">
+        Lokasjon:<br>
+        <input type="text" name="Lokasjon" value="Sofienbergparken Øst">
+        <br><br>
+        <input type="submit" value="Submit">
+      </form> 
+    </div>
+</body>
+<% include partials/script %>
+</html>
