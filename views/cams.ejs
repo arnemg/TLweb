@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu %>
+
+<div class="container-fluid bg-3 text-center">    
+  <h3><%= page %></h3><br>
+    <div class="col-sm-4">     
+      <h2>Her kommer en dynamisk liste med kamera hentet ut fra mongoose databasen</h2>
+   
+    </div>
+    <div class="col-sm-4">
+      <ul>
+      <a href="http://localhost:4000/nyCam">Registrere et nytt timelapsekamera</a>
+      </ul>
+
+    </div>
+</body>
+<% include partials/script %>
+</html>
+
